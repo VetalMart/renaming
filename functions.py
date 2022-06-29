@@ -63,10 +63,14 @@ def line_in_dict(work_dict, raw_list):
 def rename_file(src_file_folder_list, pure_dict):
     # Rename file in requred way
     excessive_file = []             # list with excessive file
+    plug = "Акт_приймання_"
     for i in src_file_folder_list:
         cut_name = i.strip('.pdf')  # number of ask 
         if cut_name in pure_dict:
-            new_file_name = "{} {}.pdf".format(cut_name, pure_dict[cut_name])
+            new_file_name = "{}_{}_{}.pdf".format(plug,
+                                                  cut_name, 
+                                                  pure_dict[cut_name]
+                                                  )
             # Rename file in proper way
             os.rename(i, new_file_name)
         # List of file which doesn't include in source txt file. 
@@ -110,5 +114,4 @@ if __name__ == "__main__":
             pass
     # Rename files and create list which not. 
     rename_file(list_file_in_working_dir, txt_dict_items) 
-    
     
