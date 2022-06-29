@@ -1,0 +1,8 @@
+# ignore
+/venv
+*.txt
+*.md
+/__pycache__
+
+# exception
+!requirements.txt
