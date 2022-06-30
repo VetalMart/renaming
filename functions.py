@@ -54,8 +54,9 @@ def split_sublist(raw_list):
 
 def line_in_dict(work_dict, raw_list):
     """Get item form list and put it in dict."""
-    work_dict[raw_list[1]] = "{}_{}_{}_{}_{}_{}_{}".format(
+    work_dict[raw_list[1]] = "{}_{}_{}_{}_{}_{}_{}_{}".format(
                                 raw_list[2],
+                                raw_list[10],
                                 raw_list[3],
                                 raw_list[4],
                                 raw_list[5],
